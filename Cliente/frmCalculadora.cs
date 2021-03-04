@@ -383,15 +383,17 @@ namespace Cliente
 
         private void btnMult_Click(object sender, EventArgs e)
         {
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "x");
             txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "x");
+            txtSmallDisplay.Text = "";
+            txtSmallDisplay.Text += (txtBigDisplay.Text + "x");
             modoOperacion = true;
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "/");
             txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "/");
+            txtSmallDisplay.Text = "";
+            txtSmallDisplay.Text += (txtBigDisplay.Text + "/");
             modoOperacion = true;
         }
 

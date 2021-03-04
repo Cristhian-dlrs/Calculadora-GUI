@@ -14,7 +14,6 @@ namespace capa_logica
     {
         private Stack<string> operaciones = new Stack<string>();
         private Stack<double> operandos = new Stack<double>();
-        private Stack<double> pritario = new Stack<double>();
 
         /// <summary>
         /// Vacia las pilas de operaciones y operandos.
@@ -30,7 +29,7 @@ namespace capa_logica
         /// </summary>
         /// <param name="operando">Nuevo operando introducido</param>
         /// <param name="operacion">Operacion solicitada</param>
-        /// <returns></returns>
+        /// <returns>El resultado de la operacion como una cadena</returns>
         public string Calcular(string operando, string operacion)
         {
             double operando1;
@@ -45,21 +44,12 @@ namespace capa_logica
             }
             else if (operandos.Count > 0 && operaciones.Count > 0)
             {
-                if (operacion == "/" || operacion == "x")
-                {
-                    operaciones.Push(operacion);
-                }
-                else
-                {
-                    operacionAnt = operaciones.Pop();
-                    operaciones.Push(operacion);
-                    operando1 = operandos.Pop();
-                    operando2 = Convert.ToDouble(operando);
-                    resultado = realizarOperacion(operando1, operando2, operacionAnt);
-                    operandos.Push(resultado);
-                }
-
-                
+                operacionAnt = operaciones.Pop();
+                operaciones.Push(operacion);
+                operando1 = operandos.Pop();
+                operando2 = Convert.ToDouble(operando);
+                resultado = realizarOperacion(operando1, operando2, operacionAnt);
+                operandos.Push(resultado);    
             }
             return resultado.ToString();
         }
@@ -84,9 +74,11 @@ namespace capa_logica
 
                 case "x":
                     return operando1 * operando2;
+                
 
                 case "/":
                     return operando1 / operando2;
+                    
 
                 case "=":
                     try

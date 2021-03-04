@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cliente", "Cliente\Cliente.csproj", "{E5C8A597-AB0C-4428-B39D-EDE4211C19BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capa logica", "capa logica\capa logica.csproj", "{D0129966-E642-423D-8B9A-2ABBC2A43EF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa logica", "capa logica\Capa logica.csproj", "{D0129966-E642-423D-8B9A-2ABBC2A43EF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

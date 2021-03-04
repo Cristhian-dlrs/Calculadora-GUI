@@ -295,8 +295,9 @@ namespace Cliente
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(90, 90);
             this.btnDot.TabIndex = 9;
-            this.btnDot.Text = ".";
+            this.btnDot.Text = ",";
             this.btnDot.UseVisualStyleBackColor = false;
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btn9
             // 
@@ -330,6 +331,7 @@ namespace Cliente
             this.btnMult.TabIndex = 11;
             this.btnMult.Text = "x";
             this.btnMult.UseVisualStyleBackColor = false;
+            this.btnMult.Click += new System.EventHandler(this.btnMult_Click);
             // 
             // btn6
             // 
@@ -380,6 +382,7 @@ namespace Cliente
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "CE";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnResta
             // 
@@ -396,6 +399,7 @@ namespace Cliente
             this.btnResta.TabIndex = 16;
             this.btnResta.Text = "-";
             this.btnResta.UseVisualStyleBackColor = false;
+            this.btnResta.Click += new System.EventHandler(this.btnResta_Click);
             // 
             // btnSuma
             // 
@@ -412,6 +416,7 @@ namespace Cliente
             this.btnSuma.TabIndex = 17;
             this.btnSuma.Text = "+";
             this.btnSuma.UseVisualStyleBackColor = false;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
             // 
             // btnDivision
             // 
@@ -428,6 +433,7 @@ namespace Cliente
             this.btnDivision.TabIndex = 18;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = false;
+            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
             // 
             // btnIgual
             // 
@@ -444,6 +450,7 @@ namespace Cliente
             this.btnIgual.TabIndex = 19;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = false;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // txtSmallDisplay
             // 

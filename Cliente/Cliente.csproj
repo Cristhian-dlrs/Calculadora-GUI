@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\capa logica\Capa logica.csproj">
+      <Project>{d0129966-e642-423d-8b9a-2abbc2a43ef5}</Project>
+      <Name>Capa logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

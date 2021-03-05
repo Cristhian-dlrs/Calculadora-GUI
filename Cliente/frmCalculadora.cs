@@ -432,11 +432,10 @@ namespace Cliente
             {
                 txtSmallDisplay.Text += txtBigDisplay.Text;
                 txtBigDisplay.Text = calculadora.Calcular(txtSmallDisplay.Text);
-                txtSmallDisplay.Text += "=";
+                txtSmallDisplay.Text += "= ";
                 modoOperacion = true;
                 finOperacion = true;
-            }
-            
+            }        
         }
 
         private void btnClear_Click(object sender, EventArgs e)

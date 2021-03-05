@@ -22,8 +22,11 @@ namespace Cliente
         private bool presionado = false;
         private int posicionMouseX = 0;
         private int posicionMousey = 0;
+        //
+        // Permiten borarr la pantall al realizar una operacaion
+        //
         private bool modoOperacion = false;
-
+        private bool finOperacion = false;      
 
         //====================================================================//
         //                      EVENTOS DE LA TITLE BAR                       //
@@ -81,233 +84,253 @@ namespace Cliente
         //====================================================================//
         //                  EVENTOS DE LOS BOTONES NUMERICOS                  //
         //====================================================================//
-        private void btn3_Click(object sender, EventArgs e)
+        private void btn0_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
-            {
-                txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "3");
-                    txtBigDisplay.Text = numero.ToString();
-                }
-            }
-            else
-            {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "3");
-                    txtBigDisplay.Text = numero.ToString();
-                }
-            }
-            modoOperacion = false;
-        }
 
-        private void btn2_Click(object sender, EventArgs e)
-        {
-            double numero;
-            if (modoOperacion)
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "2");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "2");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "0");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "1");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "1");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "1");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
-        private void btn0_Click(object sender, EventArgs e)
+        private void btn2_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "0");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "0");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "2");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
+            modoOperacion = false;
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            double numero;
+
+            if (modoOperacion && finOperacion)
+            {
+                txtBigDisplay.Text = "0";
+                txtSmallDisplay.Text = "";
+            }
+            else if (modoOperacion && !finOperacion)
+            {
+                txtBigDisplay.Text = "0";
+            }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "3");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "4");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "4");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "4");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "5");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "5");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "5");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "6");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "6");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "6");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "7");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "7");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "7");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+            
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "8");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";               
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "8");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)         
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "8");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
             double numero;
-            if (modoOperacion)
+
+            if (modoOperacion && finOperacion)
             {
                 txtBigDisplay.Text = "0";
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "9");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtSmallDisplay.Text = "";
             }
-            else
+            else if (modoOperacion && !finOperacion)
             {
-                if (txtBigDisplay.Text.Length < 9)
-                {
-                    numero = Convert.ToDouble(txtBigDisplay.Text + "9");
-                    txtBigDisplay.Text = numero.ToString();
-                }
+                txtBigDisplay.Text = "0";
             }
+            //
+            // Controlar que los numeros no se salgan de la pantalla
+            //
+            if (txtBigDisplay.Text.Length < 9)
+            {
+                numero = Convert.ToDouble(txtBigDisplay.Text + "9");
+                txtBigDisplay.Text = numero.ToString();
+            }
+            finOperacion = false;
             modoOperacion = false;
         }
 
@@ -369,46 +392,57 @@ namespace Cliente
         //====================================================================//
         private void btnSuma_Click(object sender, EventArgs e)
         {
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "+");
-            txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "+");
-            modoOperacion = true;           
+            if (!modoOperacion && txtBigDisplay.Text != "0")
+            {
+                txtSmallDisplay.Text += txtBigDisplay.Text + "+";
+                modoOperacion = true;
+            }
         }
 
         private void btnResta_Click(object sender, EventArgs e)
         {
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "-");
-            txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "-");
-            modoOperacion = true;
+            if (!modoOperacion && txtBigDisplay.Text != "0")
+            {
+                txtSmallDisplay.Text += txtBigDisplay.Text + "-";
+                modoOperacion = true;
+            }
         }
 
         private void btnMult_Click(object sender, EventArgs e)
         {
-            txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "x");
-            txtSmallDisplay.Text = "";
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "x");
-            modoOperacion = true;
+            if (!modoOperacion && txtBigDisplay.Text != "0")
+            {
+                txtSmallDisplay.Text += txtBigDisplay.Text + "x";
+                modoOperacion = true;
+            }
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
-            txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "/");
-            txtSmallDisplay.Text = "";
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "/");
-            modoOperacion = true;
+            if (!modoOperacion && txtBigDisplay.Text != "0")
+            {
+                txtSmallDisplay.Text += txtBigDisplay.Text + "/";
+                modoOperacion = true;
+            }
         }
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            txtSmallDisplay.Text += (txtBigDisplay.Text + "=");
-            txtBigDisplay.Text = calculadora.Calcular(txtBigDisplay.Text, "=");
-            modoOperacion = true;
+            if (txtBigDisplay.Text != "0" && !modoOperacion)
+            {
+                txtSmallDisplay.Text += txtBigDisplay.Text;
+                txtBigDisplay.Text = calculadora.Calcular(txtSmallDisplay.Text);
+                txtSmallDisplay.Text += "=";
+                modoOperacion = true;
+                finOperacion = true;
+            }
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtBigDisplay.Text = "0";
             txtSmallDisplay.Text = "";
-            calculadora.BorrarTodo();
         }
     }
 }
